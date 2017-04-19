@@ -1,0 +1,12 @@
+<md-card layout-padding
+     ng-if="(post.domain === 'streamable.com' || post.domain === 'youtube.com')"
+     ng-show="show">
+<div flex layout="row" layout-align="end end">
+  <md-button ng-click="show=false" class="md-icon-button md-accent" aria-label="Favorite">
+    <md-icon>clear</md-icon>
+  </md-button>
+</div>
+<h1><a href="{{post.url}}">{{post.title}}</a></h1>
+  <span ng-bind-html="embed"></span>
+  <span>{{post.ups}}</span>
+</md-card>
